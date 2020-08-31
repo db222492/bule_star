@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             android:background="@color/white">
+
+    <include layout="@layout/rlt_toolbar"/>
+
+
+    <TextView
+            android:id="@+id/tv_village_name"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="16dp"
+            android:drawableBottom="@drawable/line"
+            android:gravity="center_vertical"
+            android:onClick="click"
+            android:paddingStart="@dimen/dp_10"
+            android:text="小区名称:"
+            android:drawableStart="@mipmap/bt"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"/>
+
+
+    <TextView
+            android:id="@+id/tv_house_name"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:drawableBottom="@drawable/line"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:onClick="click"
+            android:drawableStart="@mipmap/bt"
+            android:paddingStart="@dimen/dp_10"
+            android:text="民宿名称:"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_village_name"/>
+
+
+    <TextView
+            android:id="@+id/tv_house_address_detail"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:drawableBottom="@drawable/line"
+            android:gravity="center_vertical"
+            android:onClick="click"
+            android:visibility="gone"
+            android:drawableStart="@mipmap/bt"
+            android:paddingStart="@dimen/dp_10"
+            android:text="房间详细地址:"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_house_name"/>
+
+
+    <TextView
+            android:id="@+id/tv_shi"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center_vertical"
+            android:text="辽宁省"
+            android:drawableStart="@mipmap/bt"
+            android:visibility="gone"
+            android:paddingStart="10dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/tv_house_address_detail"
+            app:layout_constraintTop_toBottomOf="@id/tv_house_address_detail"/>
+
+
+    <org.angmarch.views.NiceSpinner
+            android:id="@+id/spinner_qu"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="7"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:hint="区"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_shi"
+            app:layout_constraintStart_toEndOf="@id/tv_shi"
+            app:layout_constraintTop_toTopOf="@id/tv_shi"/>
+
+
+    <com.xinzeyijia.houselocks.ui.view.ClearEditText
+            android:id="@+id/et_village_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="140dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/round_bg_write"
+            android:gravity="center_vertical"
+            android:hint="请输入小区名称"
+            android:paddingStart="@dimen/dp_10"
+            android:singleLine="true"
+            android:paddingEnd="10dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/tv_village_name"
+            app:layout_constraintBottom_toBottomOf="@id/tv_village_name"
+            app:layout_constraintTop_toTopOf="@id/tv_village_name"/>
+
+
+    <com.xinzeyijia.houselocks.ui.view.ClearEditText
+            android:id="@+id/et_house_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="140dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/round_bg_write"
+            android:hint="请输入民宿名称"
+            android:inputType="text"
+            android:paddingStart="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_10"
+            android:visibility="gone"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_house_name"
+            app:layout_constraintStart_toEndOf="@id/tv_house_name"
+            app:layout_constraintTop_toTopOf="@id/tv_house_name"
+            app:x_disableEmoji="true"/>
+
+    <com.xinzeyijia.houselocks.ui.view.ClearEditText
+            android:id="@+id/et_house_address_detail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="140dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/round_bg_write"
+            android:hint="请输入房间详细地址"
+            android:inputType="text"
+            android:paddingStart="@dimen/dp_10"
+            android:visibility="gone"
+            android:paddingEnd="@dimen/dp_10"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_house_address_detail"
+            app:layout_constraintStart_toEndOf="@id/tv_house_address_detail"
+            app:layout_constraintTop_toTopOf="@id/tv_house_address_detail"
+            app:x_disableEmoji="true"/>
+
+    <TextView
+            android:id="@+id/tv_sure"
+            android:layout_width="280dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/select_blue_round"
+            android:gravity="center"
+            android:onClick="click"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+</android.support.constraint.ConstraintLayout>

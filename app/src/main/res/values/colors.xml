@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/blue</color>
+    <color name="colorPrimaryDark">@color/black</color>
+    <color name="colorAccent">@color/light_blue</color>
+    <color name="colorTitle">@color/white</color>
+    <color name="black">#000</color>
+    <color name="white">#ffffff</color>
+    <color name="font_grey">#8B949E</color>
+    <color name="light_blue">#5fcbfd</color><!--dialog中按钮字体颜色 -->
+    <color name="light_blue2">#855FCBFD</color><!--dialog中按钮字体颜色 -->
+    <color name="unselected_color">#6E6D6D</color>
+    <color name="selected_color">#F62459</color>
+    <color name="blue">#5583FF</color>
+    <color name="orange">#E4B509</color>
+    <color name="line_color1">#1e1f23</color>
+    <color name="line_color2">#3f4044</color>
+    <color name="black3">#8A000000</color>
+    <color name="hui">#dedcdc</color>
+    <color name="hui3">#999999</color>
+    <color name="hui8">#ff999999</color>
+    <color name="hui5">#626262</color>
+    <color name="hui6">#5A5A5A</color>
+    <color name="hui7">#FF333333</color>
+    <color name="hui4">#868686</color>
+    <color name="hui2">#9D9D9D</color>
+    <color name="hui_light">#0a000000</color>
+    <color name="hui_light2">#4D000000</color>
+    <color name="hui_light3">#f9f9f9</color>
+    <color name="hui_light4">#EEEEEE</color>
+    <color name="hui_light5">#FFDCDCDC</color>
+    <color name="titlebg">#202020</color>
+    <color name="green">#73BC96</color>
+    <color name="red">#FFDD4545</color>
+    <color name="font_dark_gray">#7F8893</color>
+    <color name="home_weiboitem_content_keyword">#507daf</color><!--关键词的颜色-->
+    <color name="purple_blue">#556ed7</color>
+    <color name="cc">#59a9ff</color>
+
+    <color name="bg_color">#EDEDED</color>
+    <color name="contents_text">#ff000000</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="help_button_view">#ffcccccc</color>
+    <color name="help_view">#ff404040</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="result_image_border">#ffffffff</color>
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c000ff00</color>
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="sbc_header_text">#ff808080</color>
+    <color name="sbc_header_view">#ffffffff</color>
+    <color name="sbc_list_item">#fffff0e0</color>
+    <color name="sbc_layout_view">#ffffffff</color>
+    <color name="sbc_page_number_text">#ff000000</color>
+    <color name="sbc_snippet_text">#ff4b4b4b</color>
+    <color name="share_text">#ff000000</color>
+    <color name="share_view">#ffffffff</color>
+    <color name="status_view">#50000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="header">#58567D</color>
+    <color name="grgray">#686868</color>
+    <color name="black1">#2C2D2F</color>
+    <color name="black2">#3f4044</color>
+
+    <color name="customCompleteColor">#FF4081</color>
+    <color name="customInCompleteColor">#05AAF5</color>
+    <color name="customThumbColor">#FF00FF</color>
+    <color name="customTextColor">#303F9F</color>
+    <color name="item_main_color">#ffffff</color>
+    <color name="item_main_color_selected">#63B8FF</color>
+
+    <color name="item_main_text_color">#63B8FF</color>
+    <color name="item_main_text_color_selected">#ffffff</color>
+
+
+
+    <color name="line">#dbdbdb</color>
+    <color name="textColor3">#333333</color>
+    <color name="textColor6">#666666</color>
+
+
+
+    <color name="background">#F2F2F2</color>
+    <color name="classify_background">#F3F5F7</color>
+    <color name="white_1">#f2eaea</color>
+    <color name="white_2">#977c7c</color>
+    <color name="text">#666666</color>
+    <color name="hint">#D2D2D2</color>
+    <color name="title_bg">#F67357</color>
+    <color name="title_bg2">#f49581</color>
+    <color name="tradinfo_bg">#3F000000</color>
+    <color name="transparency">#00000000</color>
+    <color name="transparency_black">#3F000000</color>
+    <color name="yellow">#FFB35E</color>
+    <color name="gray">#F2F2F2</color>
+    <color name="gray_cf">#CFCFCF</color>
+    <color name="hintText">#dad6d6</color>
+    <color name="stroke_bg">#bab6b6</color>
+    <color name="Popupwindows_bg">#a19e9e</color>
+    <color name="province_line_border">#D0D0D0</color>
+    <color name="scan_corner_color">#0effc2</color>
+    <color name="black_1">#000</color>
+    <color name="pickerview_bg_topbar">#f5f5f5</color>
+    <color name="amount_selected">#f3f2f4</color>
+    <color name="search_text_color">#b9b5b5</color>
+    <color name="split_line">#11112233</color>
+    <color name="text1">#59B29C</color>
+    <color name="text2">#333333</color>
+    <color name="title_transpant">#3F000000</color>
+    <color name="colorTranl">#bd232323</color>
+    <color name="text_enable">#c2b3b3</color>
+    <color name="order_status_red">#FFF1F2</color>
+
+
+    <color name="dialog_bg">#727e847e</color>
+    <color name="text_black_color">#404040</color>
+    <color name="text_gray_color">#6f6f6f</color>
+    <color name="app_theme_color">#0396ff</color>
+    <color name="dkgray">#FF444444</color>
+
+    <color name="grey"> #ebebeb</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorGrey">#7f7f7f</color>
+    <color name="darkgrey"> #C0C0C0</color>
+    <color name="text_hint">#6C6C6C</color>
+
+    <color name="txt_color">#333333</color>
+</resources>

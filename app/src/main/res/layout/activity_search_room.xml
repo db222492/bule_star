@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:id="@+id/back"
+                style="@style/back_wh"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:onClick="click"
+                android:src="@mipmap/left_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.xw.repo.XEditText
+                android:id="@+id/et_search"
+                android:layout_width="386dp"
+                android:layout_height="34dp"
+                android:layout_marginTop="59dp"
+                android:background="@drawable/hui_round_kuang2"
+                android:drawableStart="@mipmap/search_icon"
+                android:drawablePadding="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:hint="请输入房间号"
+                android:paddingStart="@dimen/dp_10"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:x_clearDrawable="@mipmap/delete_icon"/>
+
+        <TextView
+                android:id="@+id/tv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:text="搜索"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+        <View
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="103dp"
+                android:background="#FFEAEAED"
+                app:layout_constraintTop_toTopOf="parent"
+        />
+    </android.support.constraint.ConstraintLayout>
+
+
+    <include
+            layout="@layout/recyclerview_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbar"/>
+</RelativeLayout>

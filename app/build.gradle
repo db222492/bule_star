@@ -1,0 +1,232 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+//apply plugin: 'com.didi.dokit'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.xinzeyijia.houselocks"
+        minSdkVersion 21
+        targetSdkVersion 29
+        multiDexEnabled true
+        versionCode 6
+        versionName "1.2.3"
+        manifestPlaceholders = [UMENG_CHANNEL_VALUE: "houselocks"]
+        flavorDimensions "default"
+        vectorDrawables.useSupportLibrary = true
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi', 'x86', 'x86_64', 'armeabi-v7a', 'arm64-v8a'
+        }
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    signingConfigs {
+        def password = '222492'
+        def alias = 'houselocks'
+        def filePath = '../houselocks.jks'
+
+        debug {
+            keyAlias alias
+            keyPassword password
+            storeFile file(filePath)
+            storePassword(password)
+        }
+        release {
+            keyAlias alias
+            keyPassword password
+            storeFile file(filePath)
+            storePassword(password)
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable false
+            jniDebuggable false
+            minifyEnabled true //混淆
+            zipAlignEnabled true //Zipalign优化
+            shrinkResources true// 移除无用的resource文件
+            buildConfigField("boolean", "LOG_DEBUG", "false")
+            versionNameSuffix '-release'
+            applicationVariants.all { variant ->
+                variant.outputs.all {
+                    outputFileName = "YLXB_V${variant.versionName}.apk"
+                }
+            }
+        }
+        debug {
+            signingConfig signingConfigs.release
+            buildConfigField("boolean", "LOG_DEBUG", "true")
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable true
+            jniDebuggable true
+            versionNameSuffix '-debug'
+            applicationVariants.all { variant ->
+                variant.outputs.all {
+                    outputFileName = "YLXB_V${variant.versionName}.apk"
+                }
+            }
+        }
+    }
+
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+    dexOptions {
+        javaMaxHeapSize '6g'
+        preDexLibraries false
+    }
+
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+//        disable 'MissingTranslation', 'ExtraTranslation'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    packagingOptions {//依赖包内冲突的文件忽略
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/proguard/androidx-annotations.pro'
+        exclude 'META-INF/Binarizer'
+        exclude 'META-INF/ChecksumException'
+        exclude 'META-INF/DecodeHintType'
+    }
+
+    dataBinding {
+        enabled true
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+    implementation 'org.jetbrains.anko:anko-common:0.9.1'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.android.support.constraint:constraint-layout:2.0.1'
+    testImplementation 'junit:junit:4.13'
+
+    //noinspection GradleCompatible
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    // glide
+    implementation('com.github.bumptech.glide:glide:4.8.0') {
+        exclude group: "com.android.support"
+    }
+
+    //    implementation "com.android.support:support-fragment:26.1.0"
+
+    //注意java和kotlin的依赖compiler的不同
+
+    //java
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.jpeng:JPTabBar:1.4.0'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.6.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.6.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.10'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
+
+    //    implementation 'com.afollestad.material-dialogs:core:3.1.1'
+    implementation 'com.github.warkiz.widget:indicatorseekbar:2.1.2'
+//    implementation 'org.litepal.android:core:1.6.1'
+//    implementation 'com.airbnb.android:lottie:2.2.0'
+
+    //    implementation 'com.liyi.sutils:sutils:2.0.6'
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.5.1'
+
+//    implementation 'io.netty:netty-all:4.1.33.Final'
+
+    //没有使用特殊Header，可以不加这行
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.46'
+
+    //携带各种试图的布局
+    implementation 'com.classic.common:multiple-status-view:1.5.1'
+
+    //高级图片选择器
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.3'
+
+    //JSON
+    implementation 'com.alibaba:fastjson:1.2.58'
+
+    // 基础依赖包，必须要依赖
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0-beta05'
+
+    // fragment快速实现（可选）
+    implementation 'com.gyf.immersionbar:immersionbar-components:3.0.0-beta05'
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.8.0'
+
+    implementation 'com.xw.repo:xedittext:2.1.0@aar'
+
+    //文本编辑器
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+//    implementation 'com.aliyun.dpa:oss-android-sdk:2.5.0'
+
+    //版本更新
+    implementation 'com.qianwen:update-app:3.5.2'
+    implementation 'com.qianwen:okhttp-utils:3.8.0'
+    implementation 'com.kyleduo.switchbutton:library:2.0.0'
+
+    //分享面板
+//    implementation 'com.umeng.sdk:shareboard-widget:6.9.1'
+    implementation 'com.jakewharton.timber:timber:4.1.2'
+    implementation 'com.clj.fastble:FastBleLib:2.3.4'
+    implementation 'com.hyman:flowlayout-lib:1.1.2'
+    implementation 'com.contrarywind:Android-PickerView:4.1.8'
+    implementation 'com.orhanobut:logger:2.2.0'
+
+    //UI工具
+
+    //    implementation 'com.google.zxing:android-core:3.3.0'
+    implementation 'com.google.zxing:core:3.3.3'
+    implementation 'com.github.lzjin:AlipayPassDialog:2.0'
+    //下拉菜单
+    implementation 'com.github.arcadefire:nice-spinner:1.4.4'
+
+
+    //PushSDK必须依赖基础组件库，所以需要加入对应依赖
+//    implementation 'com.umeng.umsdk:common:2.1.0'
+
+    //PushSDK必须依赖utdid库，所以需要加入对应依赖
+//    implementation 'com.umeng.umsdk:utdid:1.1.5.3'
+//    implementation 'com.yanzhenjie.permission:support:2.0.1'
+
+    //PushSDK
+//    implementation 'com.umeng.umsdk:push:6.0.1'
+    implementation 'com.tencent.bugly:crashreport:latest.release'
+
+    //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
+    implementation 'com.tencent.bugly:nativecrashreport:latest.release'
+
+    //其中latest.release指代最新Bugly NDK版本号，也可以指定明确的版本号，例如3.0
+
+    //3D地图so及jar
+    implementation 'com.amap.api:3dmap:7.6.0'
+    //定位功能
+    implementation 'com.amap.api:location:5.1.0'
+    //搜索功能
+    implementation 'com.amap.api:search:7.4.0'
+    implementation 'com.xgr.easypay:EasyPay:2.0.5'   // 基类库，必选
+    implementation 'com.xgr.easypay:wechatpay:2.0.5' // 微信支付，可选
+    implementation 'com.xgr.easypay:alipay:2.0.5'    // 支付宝支付，可选
+}

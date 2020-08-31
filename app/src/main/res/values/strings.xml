@@ -1,0 +1,478 @@
+<resources>
+    <string name="app_name">一路向北</string>
+
+
+    <string name="open_close" translatable="false">全文</string>
+    <string name="hint_close" translatable="false">收起</string>
+    <string name="hint_full_text" translatable="false">全文</string>
+    <string name="press_exit_again" translatable="false">再按一次退出程序</string>
+    <string name="save_pic_success" translatable="false">图片已保存到</string>
+    <string name="behavior_sample_title" translatable="false">community.com.tmvp.view.myview.SampleTitleBehavior</string>
+    <string name="login_title" translatable="false">你好，\n欢迎来到桃花源纪</string>
+    <string name="phone_null" translatable="false">手机号码不能为空</string>
+    <string name="verification_num_not_null" translatable="false">验证码不能为空</string>
+    <string name="not_phone_num" translatable="false">手机号码错误</string>
+    <string name="Fill_in_the_correct_mobile_phone_number_and_verification_code" translatable="false">手机号或者验证码错误</string>
+    <string name="uploadding" translatable="false">正在上传中~</string>
+    <string name="upload_picture" translatable="false">上传图片</string>
+    <string name="hint_img_exists" translatable="false">该图片已下载</string>
+    <string name="download_img" translatable="false">下载图片</string>
+    <string name="go_download_img" translatable="false">正在下载图片</string>
+    <string name="video_1" translatable="false">https:\/\/xinzetaoyuan.oss-cn-beijing.aliyuncs.com\/test\/wx_camera_1562152644230.mp4
+    </string>
+
+    <string name="notifyTitle" >提示</string>
+    <string name="gpsNotifyMsg" >当前手机扫描蓝牙需要打开定位功能。</string>
+    <string name="setting" >前往设置</string>
+    <string name="cancel" >取消</string>
+
+    <string name="start_scan" >开始扫描</string>
+    <string name="stop_scan">停止扫描</string>
+    <string name="expand_search_settings" >展开搜索设置</string>
+    <string name="retrieve_search_settings" translatable="false">收起搜索设置</string>
+    <string name="connect_fail" >设备状态：蓝牙门锁连接失败请重试</string>
+    <string name="connect_success" >设备状态：蓝牙门锁连接成功</string>
+    <string name="disconnected" >设备状态：蓝牙门锁连接已断开</string>
+    <string name="connect_start" >设备状态：正在连接蓝牙门锁请稍后…</string>
+    <string name="scan_start" >设备状态：开始搜索蓝牙门锁请稍后…</string>
+    <string name="scan_scan" >设备状态：正在搜索蓝牙门锁请稍后…</string>
+    <string name="scan_finish" >设备状态：蓝牙门锁搜索完成</string>
+
+    <string name="please_open_blue" >请先打开蓝牙</string>
+    <string name="select_operation_type" >选择操作类型</string>
+    <string name="characteristic" >特性</string>
+    <string name="data_changed" >的数据变化：</string>
+    <string name="read" >读</string>
+    <string name="write" >绑定</string>
+    <string name="write2" translatable="false">开锁</string>
+    <string name="open_notification">打开通知</string>
+    <string name="close_notification" >关闭通知</string>
+    <string name="service_list" >服务列表</string>
+    <string name="characteristic_list" >特征列表</string>
+    <string name="console" >操作控制台</string>
+    <string name="name" >设备广播名：</string>
+    <string name="mac" >MAC:</string>
+    <string name="service" >服务</string>
+    <string name="type">服务类型(主服务)</string>
+    <string name="scan_setting" >在下面你可以配置需要扫描的设备的条件，可以为空</string>
+    <string name="setting_name" >输入蓝牙设备广播名，多个之间以英文逗号隔开</string>
+    <string name="setting_mac" >输入蓝牙设备mac地址</string>
+    <string name="setting_uuid" >输入蓝牙设备UUID，多个之间以英文逗号隔开</string>
+    <string name="input_hex" >请输入HEX格式指令</string>
+    <string name="connect" >连接</string>
+    <string name="connected" >已连接</string>
+    <string name="disconnect" >断开连接</string>
+    <string name="enter" >进入操作</string>
+    <string name="no_data" >"未拿到数据源,请检查网络"</string>
+
+    <string name="splash_text" translatable="false">Face Recognition</string>
+    <string name="main_item_face_register" translatable="false">人脸注册</string>
+    <string name="main_item_face_recognition" translatable="false">人脸识别 1v1</string>
+    <string name="main_item_face_recognition_n" translatable="false">人脸识别 1vN</string>
+    <string name="main_item_face_recognition_id" translatable="false">人脸识别 公安验证</string>
+    <string name="main_item_face_live" translatable="false">活体检测</string>
+    <string name="main_item_face_detect" translatable="false">人脸图像采集</string>
+    <string name="main_item_face_lite" translatable="false">人脸图像验证</string>
+    <string name="main_item_face_bank_cards" translatable="false">银行卡</string>
+    <string name="main_item_face_id_cards" translatable="false">身份证</string>
+    <string name="main_item_face_delete" translatable="false">删除功能</string>
+    <string name="play" translatable="false">play</string>
+    <string name="stop_playback" translatable="false">stop playback</string>
+    <string name="record" translatable="false">record</string>
+    <string name="stop_recording" translatable="false">stop recording</string>
+    <string name="zero" translatable="false">0</string>
+    <string name="homesaty" translatable="false">欢迎来到智能民宿</string>
+    <string name="register_name_digits" translatable="false">0123456789abcdefghijklmnopqrstuvwxyz
+        ABCDEFGHIJKLMNOPQRSTUVWXYZ`¬!"£$%^*()~=#{}[];':,./?/*-_+&#060;&#062;&#064;&#038;
+    </string>
+    <string name="title1" translatable="false">退房清扫</string>
+    <string name="title9" translatable="false">绑定蓝牙</string>
+    <string name="title7" translatable="false">解绑蓝牙</string>
+    <string name="title2" translatable="false">锁相关操作</string>
+    <string name="title3" translatable="false">蓝牙开门</string>
+    <string name="title4" translatable="false">房间详情</string>
+    <string name="title5" translatable="false">创建订单</string>
+    <string name="title6" translatable="false">订单列表</string>
+    <string name="title8" translatable="false">房间详情</string>
+    <string name="title10" translatable="false">设置空净</string>
+    <string name="title11" translatable="false">离线密码</string>
+    <string name="city_select" translatable="false">地区选择</string>
+    <string name="code223120" translatable="false">此次活体检测结果为非活体</string>
+    <string name="code223114" translatable="false">人脸模糊，拍摄时不要晃动手机</string>
+    <string name="code222203" translatable="false">请检查图片质量，重新上传含有清晰人脸的图片</string>
+    <string name="cannot_scan_without_permission" translatable="false">没有权限无法扫描</string>
+    <array name="types">
+        <item>身份证</item>
+        <item>驾驶证</item>
+    </array>
+    <array name="saveImage">
+        <item>保存识别图</item>
+        <item>不保存识别图</item>
+    </array>
+
+    <string name="lock_about">锁相关操作</string>
+    <string name="gateway_about">网关</string>
+    <string name="upgrade_about">锁升级相关</string>
+    <string name="passcode_about">密码相关</string>
+    <string name="fingerprint_about">指纹相关</string>
+    <string name="ic_card_about">IC 卡相关</string>
+    <string name="passageModeEnter">设置常开模式</string>
+    <string name="lockTimeAbout">锁时间相关</string>
+    <string name="get_time">获取锁时间</string>
+    <string name="lock_time_is">当前锁内部时间</string>
+    <string name="set_lock_time">设置锁时间</string>
+    <string name="get_log">获取锁操作日志</string>
+    <string name="get_battery">读取锁电量</string>
+    <string name="lock_system_info">获取锁系统信息</string>
+
+    <string name="set_custom_passcode">设置自定义密码</string>
+    <string name="input_custom_passcode">输入自定义密码</string>
+    <string name="start_date">生效时间:</string>
+    <string name="end_date">过期时间:</string>
+    <string name="get_lock_status">查询锁状态</string>
+    <string name="set_auto_locking_time">设置自动闭锁时间</string>
+    <string name="modify_passcode">修改密码</string>
+    <string name="delete_passcode">删除密码</string>
+    <string name="reset_passcode">重置密码</string>
+    <string name="get_valid_passcodes">获取锁中全部密码</string>
+    <string name="get_pwdinfo">获取密码校验信息</string>
+    <string name="modify_date">只修改有效期</string>
+    <string name="modify_passcode_only">只修改密码</string>
+    <string name="modify_passcode_and_date">密码和有效期同时修改</string>
+    <string name="input_new_passcode">请输入新密码</string>
+    <string name="admin_passcode">管理员密码</string>
+    <string name="get_admin_passcode">获取锁管理员密码</string>
+    <string name="modify_admin_passcode">修改管理员密码</string>
+
+    <string name="add_permanent_ic_card">添加永久有效IC卡</string>
+    <string name="add_period_id_card">添加限时IC卡</string>
+    <string name="modify_period">修改有效期</string>
+    <string name="delete_ic_card">删除IC卡</string>
+    <string name="get_all_ic_card">获取锁中所有有效IC卡信息</string>
+    <string name="clear_all_ic_card">清空锁中IC卡</string>
+    <string name="add_permanent_fingerprint">添加永久有效指纹</string>
+    <string name="add_period_fingerprint">添加限时指纹</string>
+    <string name="delete_fingerprint">删除指纹</string>
+    <string name="get_all_fingerprint">获取锁中所有有效指纹信息</string>
+    <string name="clear_all_fingerprint">清空锁中指纹</string>
+    <string name="unlock">开锁</string>
+    <string name="lock">闭锁</string>
+    <string name="rolling_gate_up">卷闸门升起</string>
+    <string name="rolling_gate_down">卷闸门下降</string>
+    <string name="rolling_gate_pause">卷闸门停止</string>
+    <string name="rolling_gate_lock">卷闸门锁定</string>
+    <string name="initLock">初始化锁</string>
+    <string name="reset_lock">重置锁</string>
+    <string name="config_feature">开启/关闭特殊功能</string>
+    <string name="reset_key">重置电子钥匙</string>
+    <string name="lock_mute_mode">锁静音模式</string>
+    <string name="remote_unlock">远程开门功能</string>
+    <string name="passcode_visible">输入密码是否明文模式</string>
+    <string name="passage_mode">常开模式</string>
+    <string name="query">查询</string>
+    <!--fingerprint-->
+    <string name="my_fingerprint_list">我的指纹列表</string>
+    <string name="my_card_list">我的IC卡列表</string>
+
+    <!-- firmware update -->
+    <string name="check_version">检查更新</string>
+    <string name="recheck_version">再次检测更新</string>
+    <string name="words_status">状态</string>
+    <string name="words_version_info">版本信息</string>
+    <string name="retry">重试</string>
+
+    <!-- auth -->
+    <string name="account">账号:</string>
+    <string name="password">密码:</string>
+    <string name="enter_account">输入账号</string>
+    <string name="enter_password">输入密码</string>
+    <string name="authorize">授权</string>
+
+
+    <string name="get_passage_mode">获取常开模式数据</string>
+    <string name="set_passage_mode">设置常开模式</string>
+    <string name="delete_passage_mode">删除单个常开模式设置</string>
+    <string name="clear_passage_mode">清空常开模式设置</string>
+
+    <!-- gateway -->
+    <string name="initGateway">初始化网关</string>
+    <string name="gateway_operate_info">将网关重新通电，指示灯交替闪烁时点击扫描</string>
+    <string name="scan">扫描</string>
+    <string name="words_wifi_name">WiFi名称</string>
+    <string name="words_wifi_pwd">WiFi密码</string>
+    <string name="words_gateway_name">网关名称</string>
+    <string name="add">添加</string>
+    <string name="gateway_out_of_time">连接超时，已退出添加模式</string>
+    <string name="no_updates">已是最新版本</string>
+    <string name="new_version_found">有新版本</string>
+    <string name="unknown_lock_version">锁版本未知</string>
+    <string name="upgrade">升级</string>
+    <string name="retry_by_net">通过网络重试</string>
+    <string name="retry_by_ble">通过蓝牙重试</string>
+    <string name="dialog_cancel">取消</string>
+    <string name="select_net">选择网络</string>
+    <!--wireless keyboard-->
+    <string name="wirelesskeyboard">无线键盘</string>
+    <string name="bedroom_txt" translatable="false">提示：未避免因户型信息与图片不符产生投诉，请保证上传图片高清、无水印、无联系方式、logo</string>
+    <string name="link_text_manual"><u>下划线</u>
+    </string>
+    <string name="no_room">暂无房间</string>
+    <string name="no_order">暂无订单</string>
+
+    <string name="comfirm">确认</string>
+    <string name="reject">拒绝</string>
+    <string name="no_search_device">没有查到任何设备</string>
+    <string name="no_search_bluetouch_name">未查到蓝牙名</string>
+    <string name="lock_already_isband">此门锁已绑定</string>
+    <string name="get_bluetouch_name">获取蓝牙名</string>
+    <string name="lock_connect">搜索门锁</string>
+    <string name="weicat_no_edit">微信订单不能修改时间</string>
+    <string name="forget_psw">忘记密码?</string>
+    <string name="place_embody_psw">请输入提现密码</string>
+    <string name="place_import_pay_psw">设置支付密码</string>
+    <string name="kindly_reminder">温馨提示</string>
+    <string name="confirm">确定</string>
+    <string name="fingerprint_account">Hello,%s</string>
+    <string name="fingerprintChangeTip">您设备的指纹发生了变化或系统出错,指纹登录已关闭.请使用其他方式登录后重新开启.</string>
+
+
+
+
+
+    <string name="lock_list">搜索列表</string>
+    <string name="searching">搜索中...</string>
+    <string name="notice">提示</string>
+    <string name="ble_not_support">BLE设备功能不支持！</string>
+    <string name="ok">OK</string>
+    <string name="action_enable_ble">Enable bluetooth now?</string>
+    <string name="ble_permission_not_granted">未打开蓝牙权限！是否开启</string>
+    <string name="progress_connecting">蓝牙连接中...</string>
+    <string name="state_connected">已连接</string>
+    <string name="state_disconnected">未连接</string>
+    <string name="ble_connection_interrupted">连接中断</string>
+    <string name="ble_connection_fail">连接失败！</string>
+    <string name="exit">退出</string>
+    <string name="state_ready">已就绪</string>
+    <string name="cmd_rsp_fail">命令回复失败！</string>
+    <string name="format_lock_state">门锁MAC: %1$s，绑定状态: %2$b</string>
+    <string name="format_dev_mac">设备MAC：%1$s</string>
+    <string name="format_dev_type">设备类型：%1$s</string>
+    <string name="lock_type_other">蓝牙密码锁</string>
+    <string name="lock_type_nb">蓝牙NB锁</string>
+    <string name="lock_type_f">蓝牙指纹锁</string>
+    <string name="lock_type_c">蓝牙NB指纹锁</string>
+    <string name="bind_lock">绑定</string>
+    <string name="unbind_lock">解绑</string>
+    <string name="lock_state">查询状态</string>
+    <string name="lock_battery">查询电量</string>
+    <string name="nb_imei">查询IMEI</string>
+    <string name="lock_login">进登录状态</string>
+    <string name="open_lock">蓝牙解锁</string>
+    <string name="sync_clock">同步时间</string>
+    <string name="add_pincode">添加密码</string>
+    <string name="del_pincode">删除密码</string>
+    <string name="add_rf_card">添加房卡</string>
+    <string name="del_rf_card">删除房卡</string>
+    <string name="add_fingerprint">添加指纹</string>
+    <string name="del_fingerprint">删除指纹</string>
+    <string name="change_admin_pincode">修改管理密码</string>
+    <string name="gen_offline_pincode">生成离线限时密码</string>
+    <string name="ready_to_swipe_rf_card">请刷卡！</string>
+    <string name="bind_lock_succ">绑定成功！</string>
+    <string name="bind_lock_fail">绑定失败！</string>
+    <string name="unbind_lock_succ">解绑成功！</string>
+    <string name="unbind_lock_fail">解绑失败！</string>
+    <string name="open_lock__succ">开锁成功！</string>
+    <string name="open_lock_fail">开锁失败！</string>
+    <string name="lock_login_succ">登录成功！</string>
+    <string name="lock_login_fail">登录失败！</string>
+    <string name="sync_clock_succ">同步时间成功！</string>
+    <string name="sync_clock_fail">同步时间失败！</string>
+    <string name="format_lock_battery">门锁电量为: %1$d%%</string>
+    <string name="format_lock_battery_low_info">已上锁！电量预警！当前门锁电量为: %1$d%%</string>
+    <string name="format_lock_battery_low_warn">已上锁！电量报警！当前门锁电量为: %1$d%%</string>
+    <string name="report_lock_battery">已上锁！</string>
+    <string name="detect_new_rf_card">检测到新卡</string>
+    <string name="format_add_rf_card_or_not">是否添加此房卡，卡号：%1$s？</string>
+    <string name="format_rf_card_unlock_succ">房卡开锁成功，序号：%1$d！</string>
+    <string name="multi_rf_card_unlock_fail">多次刷房卡开锁失败！</string>
+    <string name="format_rf_card_unlock_succ2">房卡开锁成功，卡号：%1$s！</string>
+    <string name="multi_rf_card_unlock_fail2">房卡未授权，卡号：%1$s！</string>
+    <string name="format_pincode_unlock_succ">密码开锁成功，序号：%1$d！</string>
+    <string name="multi_pincode_unlock_fail">多次密码开锁失败！</string>
+    <string name="format_pincode_unlock_succ2">密码：%1$d开锁成功！</string>
+    <string name="format_pincode_unlock_fail2">密码：%1$d未授权！</string>
+    <string name="format_offline_pincode_succ">离线密码：</string>
+    <string name="format_offline_pincode_fail">生成出错：%1$s！</string>
+    <string name="format_fingerprint_unlock_succ">指纹开锁成功，序号：%1$d！</string>
+    <string name="multi_fingerprint_unlock_fail">多次指纹开锁失败！</string>
+    <string name="format_nb_imei">设备IMEI号为：%1$s！</string>
+    <string name="add_pincode_succ">密码添加成功！</string>
+    <string name="add_pincode_fail">添加密码失败！</string>
+    <string name="del_pincode_succ">删除密码成功！</string>
+    <string name="del_pincode_fail">删除密码失败！</string>
+    <string name="add_rf_card_succ">添加房卡成功！</string>
+    <string name="add_rf_card_fail">添加房卡失败！</string>
+    <string name="del_rf_card_succ">删除房卡成功！</string>
+    <string name="del_rf_card_fail">删除房卡失败！</string>
+    <string name="add_fingerprint_succ">添加指纹成功！</string>
+    <string name="add_fingerprint_fail">添加指纹失败！</string>
+    <string name="del_fingerprint_succ">删除指纹成功！</string>
+    <string name="del_fingerprint_fail">删除指纹失败！</string>
+    <string name="change_admin_pincode_succ">修改管理密码成功！</string>
+    <string name="change_admin_pincode_fail">修改管理密码失败！</string>
+    <string name="ready_to_press_fingerprint">请按压指纹！</string>
+    <string name="action_to_press_fingerprint">请按下指纹！</string>
+    <string name="action_to_leave_fingerprint">移开指纹</string>
+    <string name="error_login_state_off">操作前请先登录！</string>
+    <string name="error_wait_timeout">操作操时！</string>
+    <string name="error_user_cancel">用户取消操作！</string>
+    <string name="error_time_invalid">时间参数有误！</string>
+    <string name="error_index_invalid">操作序号有误！</string>
+    <string name="lock_swarm">锁相关操作</string>
+    <string name="wsl">WSL</string>
+    <string name="qzh_ble">QZH_BLE</string>
+    <string name="search_later_on">正在搜索中，请稍后...</string>
+    <string name="admin_name_no_empty">管理员密码不能为空</string>
+    <string name="doing_get_data">正在获取数据</string>
+    <string name="nonsupport_ble">此手机不支持BLE</string>
+
+
+    <string name="no_result">对不起，没有搜索到相关数据！</string>
+
+
+    <string name="basic_map">基本地图</string>
+    <string name="basic_description">介绍如何创建一个基本地图</string>
+    <string name="camera_demo">Camera功能</string>
+    <string name="camera_description">介绍在地图中操作Camera各种功能</string>
+    <string name="clear_map">Clear</string>
+    <string name="compass">指南针</string>
+    <string name="custom_info_contents">Custom info contents</string>
+    <string name="custom_info_window">Custom info window</string>
+    <string name="default_info_window">Default info window</string>
+    <string name="demo_title">AMaps3D  Demos</string>
+    <string name="down_arrow">\u2193</string>
+    <string name="drag_melbourne">Drag Melbourne</string>
+    <string name="events_demo">Events功能</string>
+    <string name="events_description">介绍对地图的点击，长按，拖动地图事件功能</string>
+    <string name="fill_stroke">Fill Stroke</string>
+    <string name="fill_color">Fill Color</string>
+    <string name="go_to_zhongguancun">中关村</string>
+    <string name="go_to_lujiazui">陆家嘴</string>
+    <string name="hybrid">Hybrid</string>
+    <string name="location">正在定位中</string>
+    <string name="gpsfollow">追随</string>
+    <string name="gpslocate">定位</string>
+    <string name="gpsrotate">旋转</string>
+
+    <string-array name="layers_array">
+        <item>@string/normal</item>
+        <item>@string/satellite</item>
+        <item>@string/night_mode</item>
+    </string-array>
+
+    <string name="layers_demo">Layers图层功能</string>
+    <string name="layers_description">介绍地图分别以正常、卫星模式展示出</string>
+    <string name="left_arrow">\u2190</string>
+    <string name="locationsource_demo">Location小蓝点功能</string>
+    <string name="locationsource_description">介绍对系统定位显示小蓝点功能</string>
+    <string name="locationmodesource_demo">Location三种模式</string>
+    <string name="locationmodesource_description">介绍定位、追随、选择不同模式使用</string>
+    <string name="locationGPS_demo">gps定位功能</string>
+    <string name="locationGPS_description">介绍如何使用gps定位</string>
+    <string name="locationNetwork_description">介绍如何使用网络定位</string>
+    <string name="locationNetwork_demo">网络定位功能</string>
+    <string name="marker_demo">Markers功能</string>
+    <string name="marker_description">介绍在地图上添加marker和infoWindow</string>
+    <string name="mapOption_demo">AMapOptions实现地图</string>
+    <string name="mapOption_description">介绍用AMapOptions展示一个地图</string>
+    <string name="map_not_ready">SupportMapFragment初始化失败</string>
+    <string name="move_the_camera">移动camera</string>
+    <string name="touch_the_map">地图触摸事件</string>
+    <string name="my_location">My Location</string>
+    <string name="mylocation_layer">我的位置图层</string>
+    <string name="no_demos">No demos</string>
+    <string name="normal">Normal</string>
+    <string name="night_mode">Night</string>
+    <string name="polygon_demo">Polygons功能</string>
+    <string name="polygon_description">介绍在地图绘制多边形</string>
+    <string name="polyline_demo">Polylines功能</string>
+    <string name="polyline_description">介绍在地图中绘制线条</string>
+    <string name="groundoverlay_demo">GroundOverlay功能</string>
+    <string name="groundoverlay_description">介绍在地图中绘制GroundOverlay功能</string>
+    <string name="tileoverlay_demo">TileOverlay功能</string>
+    <string name="tileoverlay_description">介绍在地图中绘制TileOverlay功能</string>
+    <string name="circle_demo">Circles功能</string>
+    <string name="circle_description">介绍在地图中绘制圆形</string>
+    <string name="arc_demo">Arc功能</string>
+    <string name="arc_description">介绍在地图中绘制弧形</string>
+    <string name="screenshot_demo">地图截屏功能</string>
+    <string name="screenshot_description">介绍对地图进行截屏</string>
+    <string name="properties_polyline">设置Polyline属性</string>
+    <string name="properties_polygon">设置Polygon属性</string>
+    <string name="properties_circle">设置Circle属性</string>
+    <string name="busline_demo">Busline公交查询</string>
+    <string name="busline_description">介绍如何在地图中绘制BusLine</string>
+    <string name="route_demo">Route路径规划</string>
+    <string name="route_description">介绍如何在地图中绘制Route</string>
+    <string name="rotate">旋转手势</string>
+    <string name="reset_map">Reset</string>
+    <string name="right_arrow">\u2192</string>
+    <string name="satellite">Satellite</string>
+    <string name="scroll">滑动手势</string>
+    <string name="stop_animation">\u25A0</string>
+    <string name="stroke_width">Stroke Width</string>
+    <string name="tap_instructions">点击或者长按地图</string>
+    <string name="terrain">Terrain</string>
+    <string name="tilt">倾斜手势</string>
+    <string name="traffic">Traffic</string>
+    <string name="transparency">Transparency</string>
+    <string name="opengl_demo">Opengl接口功能</string>
+    <string name="opengl_description">介绍地图中开放Opengl接口功能</string>
+    <string name="uisettings_demo">UI Settings功能</string>
+    <string name="uisettings_description">介绍地图中UI Settings功能</string>
+    <string name="geocoder_demo">地理编码 功能</string>
+    <string name="geocoder_description">介绍 geocoder地理编码 功能</string>
+    <string name="poikeywordsearch_demo">poi关键字搜索</string>
+    <string name="poikeywordsearch_description">介绍poi关键字搜索功能</string>
+    <string name="poiaroundsearch_demo">poi周边搜索</string>
+    <string name="poiaroundsearch_description">介绍poi周边搜索功能</string>
+    <string name="offlinemap_demo">离线地图功能</string>
+    <string name="offlinemap_description">介绍如何使用离线地图</string>
+    <string name="search_title">搜索关键字</string>
+    <string name="up_arrow">\u2191</string>
+    <string name="width">Width</string>
+    <string name="zoom_buttons">缩放按钮</string>
+    <string name="zoom_gestures">缩放手势</string>
+    <string name="zoom_in">+</string>
+    <string name="zoom_out">-</string>
+    <string name="scale">比例尺</string>
+    <string name="buttonScale">获取比例尺</string>
+
+    <!-- offlinemap -->
+    <string name="beijing">"北京"</string>
+    <string name="start">"开始"</string>
+    <string name="pause">"暂停"</string>
+    <string name="stop">"停止"</string>
+    <string name="remove">"删除"</string>
+    <string name="update">"更新"</string>
+    <string name="logo_position">logo位置</string>
+    <string name="bottom_left">左下</string>
+    <string name="bottom_center">底部居中</string>
+    <string name="bottom_right">右下</string>
+    <string name="map_screenshot">地图截屏</string>
+    <string name="error_network">搜索失败,请检查网络连接！</string>
+    <string name="error_key">key验证无效！</string>
+    <string name="error_other">未知错误，请稍后重试!错误码为</string>
+
+    <string name="startLocation">开始定位</string>
+    <string name="stopLocation">停止定位</string>
+
+
+    <string name="pull_to_refresh">下拉可以刷新</string>
+    <string name="release_to_refresh">松开可以刷新</string>
+    <string name="lastUpdateTime">最近更新：%s</string>
+    <string name="load_full">已加载全部</string>
+    <string name="more">加载中</string>
+    <string name="d">图片描述</string>
+</resources>

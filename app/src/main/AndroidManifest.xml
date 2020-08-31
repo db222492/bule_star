@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.xinzeyijia.houselocks">
+
+    <uses-feature
+            android:name="android.hardware.bluetooth_le"
+            android:required="true"/>
+
+
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission
+            android:name="android.permission.OVERRIDE_WIFI_CONFIG"
+            tools:ignore="ProtectedPermissions"/> <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/> <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/> <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/> <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/> <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/> <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/> <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/> <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/> <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission
+            android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+            tools:ignore="ProtectedPermissions"/> <!-- 壁纸设置权限，用户设置妹子壁纸 -->
+    <uses-permission android:name="android.permission.SET_WALLPAPER"/> <!-- Bugly 需要的权限 -->
+    <uses-permission
+            android:name="android.permission.READ_LOGS"
+            tools:ignore="ProtectedPermissions"/> <!-- Bugly 需要的权限 -->
+    <uses-permission
+            android:name="android.permission.REQUEST_INSTALL_PACKAGES"/> <!-- //下面列出的是必选的权限，还有可选的权限没有列出，例如前台是否可以显示通知这个可选权限 -->
+    <!-- 华为 -->
+    <uses-permission
+            android:name="com.huawei.android.launcher.permission.CHANGE_BADGE"/> <!-- <uses-permission android:name="com.sec.android.provider.badge.permission.READ"/> -->
+    <!-- <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE"/> -->
+    <!-- OPPO -->
+    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS"/> <!-- 联想ZUK -->
+    <uses-permission android:name="android.permission.READ_APP_BADGE"/> <!-- HTC -->
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission
+            android:name="android.permission.BLUETOOTH"/> <!-- <uses-permission android:name="android.permission.WRITE_SETTINGS" /> -->
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission
+            android:name="android.permission.WRITE_MEDIA_STORAGE"
+            tools:ignore="ProtectedPermissions"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/> <!-- 以下是使用wifi访问网络所需的权限 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission
+            android:name="android.permission.STATUS_BAR_SERVICE"
+            tools:ignore="ProtectedPermissions"/>
+    <uses-permission
+            android:name="android.permission.STATUS_BAR"
+            tools:ignore="ProtectedPermissions"/>
+    <!-- 指纹权限 -->
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT"/>
+
+
+    <supports-screens
+            android:anyDensity="true"
+            android:largeScreens="true"
+            android:normalScreens="true"
+            android:resizeable="true"
+            android:smallScreens="true"/>
+
+    <!-- OpenGLES 2.0 -->
+    <uses-feature
+            android:glEsVersion="0x00020000"
+            android:required="true"/>
+    <application
+            android:name=".App"
+            android:allowBackup="false"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:maxAspectRatio="2.4"
+            android:resizeableActivity="true"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme"
+            android:usesCleartextTraffic="true"
+            android:networkSecurityConfig="@xml/network_security_config"
+            tools:ignore="ExtraText,GoogleAppIndexingWarning"
+            tools:replace="android:icon, android:theme,android:allowBackup"
+            android:requestLegacyExternalStorage="true"
+            tools:targetApi="q">
+        <activity android:name=".ui.activity.SearchRoomActivity">
+        </activity>
+
+        <meta-data
+                android:name="android.max_aspect"
+                android:value="2.4"/> <!-- 适配华为（huawei）刘海屏 -->
+        <meta-data
+                android:name="android.notch_support"
+                android:value="true"/> <!-- 适配小米（xiaomi）刘海屏 -->
+        <!-- 配置APP ID -->
+        <meta-data
+                android:name="BUGLY_APPID"
+                android:value="8830bc3d68"/>
+        <!-- 配置APP版本号 -->
+        <meta-data
+                android:name="BUGLY_APP_VERSION"
+                android:value="1.2.3"/>
+        <!-- 配置APP渠道号 -->
+        <meta-data
+                android:name="BUGLY_APP_CHANNEL"
+                android:value=""/>
+        <!-- 配置Bugly调试模式（true或者false）-->
+        <meta-data
+                android:name="BUGLY_ENABLE_DEBUG"
+                android:value="true"/>
+
+        <receiver android:name=".ui.broadcast.NetworkConnectChangedReceiver">
+            <intent-filter>
+
+                <!-- 注册开机广播地址 -->
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver> <!-- 版本更新所要用到的 fileProvider 用于兼容7.0通知栏的安装 -->
+        <provider
+                android:name="android.support.v4.content.FileProvider"
+                android:authorities="${applicationId}.fileProvider"
+                android:exported="false"
+                android:grantUriPermissions="true">
+
+            <!-- 元数据 -->
+            <meta-data
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/file_paths"/>
+        </provider>
+
+
+        <activity
+                android:name=".ui.activity.BlueTouthMakersActivity"
+                android:screenOrientation="portrait"/>
+
+        <activity
+                android:name=".ui.activity.PropertyIdListActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".ui.activity.MyMoneyActivity"
+                android:screenOrientation="portrait">
+
+        </activity>
+       <activity
+                android:name=".ui.activity.PayMangerActivity"
+                android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+                android:name=".ui.activity.BindBankCardActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".ui.activity.HomeActivity"
+                android:launchMode="singleTask"
+                android:screenOrientation="portrait">
+
+        </activity>
+
+
+        <activity
+                android:name=".ui.activity.LockOpenActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".ui.activity.LockUpdateActivity"
+                android:screenOrientation="portrait"/>
+
+        <activity
+                android:name=".ui.activity.LockRecordActivity"
+                android:screenOrientation="portrait"/>
+
+        <activity
+                android:name=".ui.activity.LockRegistActivity"
+                android:screenOrientation="portrait">
+        </activity>
+        <activity
+                android:name=".ui.activity.LockUnBindActivity"
+                android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+                android:name=".ui.activity.LockSearchActivity"
+                android:screenOrientation="portrait">
+        </activity>
+
+
+        <activity
+                android:name=".ui.activity.AddRoomActivity"
+                android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+                android:name=".ui.activity.AddRoomHomeActivity"
+                android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+                android:name=".ui.activity.AddRoomItem1Activity"
+                android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+                android:name=".ui.activity.EditRoomActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".ui.activity.AddRoomItem2Activity"
+                android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+                android:name=".ui.activity.AddRoomItem3Activity"
+                android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+                android:name=".ui.activity.OfflinePasswordActivity"
+                android:screenOrientation="portrait"/>
+
+
+        <activity
+                android:name=".ui.activity.RoomDetailActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".ui.activity.RoomMangerActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".ui.activity.GaodeSearchAddressActivity"
+                android:screenOrientation="portrait"
+                android:configChanges="orientation|keyboardHidden|screenSize">
+
+        </activity>
+
+        <activity
+                android:name=".ui.activity.RoomReleaseActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".ui.activity.ReleaseRecordActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".ui.activity.OrderDetailActivity"
+                android:screenOrientation="portrait">
+        </activity>
+
+
+        <activity
+                android:name=".ui.activity.RegistActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".ui.activity.LoginActivity"
+                android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name=".ui.activity.AddPropertyIdActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".ui.activity.FingerprintActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".ui.activity.OrderActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".ui.activity.AddOrderActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".ui.activity.LockSwActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".ui.activity.LockOpenPswActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".ui.activity.EditOrderActivity"
+                android:screenOrientation="portrait"/>
+
+        <activity
+                android:name=".ui.activity.AddUserItemActivity"
+                android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+                android:name=".ui.activity.CharacterActivity"
+                android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+                android:name=".ui.activity.AddRoomItem4Activity"
+                android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+                android:name=".ui.activity.EmbodyActivity"
+                android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+                android:name=".ui.activity.PayActivity"
+                android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+                android:name=".ui.activity.BankCardMangerActivity"
+                android:screenOrientation="portrait">
+
+        </activity>
+
+
+        <activity
+                android:name=".ui.activity.EmbodySuccessActivity"
+                android:screenOrientation="portrait">
+        </activity>
+
+
+        <activity
+                android:name=".ui.activity.UpdatePasswordActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".ui.activity.AddChildAccountActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".ui.activity.ChildAccountActivity"
+                android:screenOrientation="portrait"/>
+
+        <meta-data
+                android:name="com.baidu.lbsapi.API_KEY"
+                android:value="Dt5RNHPcgvTUENI1XhAtISY39hxGAwdC"/>
+
+        <meta-data android:name="com.amap.api.v2.apikey" android:value="4da559e7e6ef081aa916078b73ed0198">
+        </meta-data>
+
+        <!-- 定位需要的服务 -->
+        <service android:name="com.amap.api.location.APSService">
+        </service>
+    </application>
+
+</manifest>

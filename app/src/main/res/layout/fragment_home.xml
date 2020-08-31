@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--以此View作为基准参照物-->
+
+    <include layout="@layout/rlt_three_toolbar" />
+
+    <include layout="@layout/tlt_layout" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vpr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tlt" />
+
+</RelativeLayout>

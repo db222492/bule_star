@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tl="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_height="match_parent">
+
+    <include layout="@layout/rlt_three_toolbar" />
+
+    <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/tlt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/toolbar"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white"
+            app:layout_collapseMode="pin"
+            app:tl_iconVisible="false"
+            app:tl_indicator_color="@color/colorAccent"
+            app:tl_indicator_corner_radius="@dimen/text_15_sp"
+            app:tl_indicator_height="5dp"
+            app:tl_indicator_width_equal_title="true"
+            app:tl_tab_padding="13dp"
+            app:tl_tab_space_equal="true"
+            app:tl_textBold="SELECT"
+            app:tl_textSelectColor="@color/colorAccent"
+            app:tl_textUnselectColor="@color/hui3"
+            app:tl_textsize="15sp"
+            app:tl_underline_color="@color/white"
+            tl:tl_divider_padding="13dp"
+            tl:tl_divider_width="1dp"
+            tl:tl_indicator_margin_left="2dp"
+            tl:tl_indicator_margin_right="2dp"
+            tl:tl_indicator_style="NORMAL"/>
+
+    <android.support.v4.view.ViewPager
+            android:id="@+id/vpr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tlt"/>
+</RelativeLayout>

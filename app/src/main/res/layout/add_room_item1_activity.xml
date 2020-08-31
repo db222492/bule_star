@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             android:background="@color/white"
+                                             android:orientation="vertical">
+
+    <include layout="@layout/rlt_toolbar"/>
+
+
+    <TextView
+            android:id="@+id/tv_set1"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="16dp"
+            android:drawableBottom="@drawable/line"
+            android:gravity="center_vertical"
+            android:drawableStart="@mipmap/bt"
+            android:paddingStart="@dimen/dp_10"
+            android:text="房间标题:"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"/>
+
+
+    <TextView
+            android:id="@+id/tv_set2"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="16dp"
+            android:drawableBottom="@drawable/line"
+            android:gravity="center_vertical"
+            android:drawableStart="@mipmap/bt"
+            android:paddingStart="@dimen/dp_10"
+            android:text="房间户型:"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_set1"/>
+
+    <TextView
+            android:id="@+id/tv_set5"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="16dp"
+            android:drawableBottom="@drawable/line"
+            android:gravity="center_vertical"
+            android:drawableStart="@mipmap/bt"
+            android:paddingStart="@dimen/dp_10"
+            android:text="房间描述:"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_set2"/>
+    <TextView
+            android:id="@+id/tv_shi"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:text=""
+            android:drawableStart="@mipmap/bt"
+            android:paddingStart="10dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_set5"/>
+
+
+    <org.angmarch.views.NiceSpinner
+            android:id="@+id/spinner_qu"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="7"
+            android:gravity="center_vertical"
+            android:hint="区"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_shi"
+            app:layout_constraintStart_toEndOf="@id/tv_shi"
+            app:layout_constraintTop_toTopOf="@id/tv_shi"/>
+
+    <TextView
+            android:id="@+id/tv_set6"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="16dp"
+            android:drawableBottom="@drawable/line"
+            android:gravity="center_vertical"
+            android:drawableStart="@mipmap/bt"
+            android:paddingStart="@dimen/dp_10"
+            android:text="详细地址:"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/spinner_qu"/>
+    <com.xinzeyijia.houselocks.ui.view.ClearEditText
+            android:id="@+id/et_set1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="129dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/round_bg_write"
+            android:hint="最多输入20个字"
+            android:inputType="text"
+            android:maxLength="20"
+            android:paddingStart="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_10"
+            android:singleLine="true"
+            android:textColor="@color/black"
+
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_set1"
+            app:layout_constraintStart_toEndOf="@id/tv_set1"
+            app:layout_constraintTop_toTopOf="@id/tv_set1"/>
+
+
+    <com.xinzeyijia.houselocks.ui.view.ClearEditText
+            android:id="@+id/et_set5"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="129dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/round_bg_write"
+            android:hint="请描述详情，最多可输入200字"
+            android:inputType="text"
+            android:maxLength="200"
+            android:paddingStart="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_10"
+            android:singleLine="true"
+            android:textColor="@color/black"
+
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_set5"
+            app:layout_constraintTop_toTopOf="@id/tv_set5"/>
+    <TextView
+            android:id="@+id/et_set6"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="129dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/round_bg_write"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_10"
+            android:hint="请选择地址"
+            android:textColor="@color/black"
+            android:onClick="click"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_set6"
+            app:layout_constraintTop_toTopOf="@id/tv_set6"/>
+
+
+    <TextView
+            android:id="@+id/et_set2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="129dp"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="7"
+            android:drawableEnd="@mipmap/bto_icon"
+            android:gravity="center_vertical"
+            android:hint="例如：两室一厅"
+            android:onClick="click"
+            android:paddingStart="10dp"
+            android:paddingEnd="20dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_set2"
+            app:layout_constraintStart_toEndOf="@id/tv_set2"
+            app:layout_constraintTop_toTopOf="@id/tv_set2"/>
+
+
+    <TextView
+            android:id="@+id/tv_sure"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/select_blue_round"
+            android:gravity="center"
+            android:onClick="click"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</android.support.constraint.ConstraintLayout>

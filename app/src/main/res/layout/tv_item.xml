@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          android:id="@+id/title"
+          android:layout_width="80dp"
+          android:layout_height="34dp"
+          android:layout_margin="12dp"
+          android:background="@drawable/hui_round_kuang"
+          android:gravity="center"
+          android:paddingStart="10dp"
+          android:ellipsize="end"
+          android:maxEms="5"
+          android:maxLines="1"
+          android:paddingTop="4dp"
+          android:paddingEnd="10dp"
+          android:paddingBottom="4dp" />

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clt_kuang"
+    android:layout_width="match_parent"
+    android:layout_height="142dp"
+    android:layout_marginStart="22dp"
+    android:layout_marginTop="22dp"
+    android:background="@drawable/hui_round_kuang3"
+    android:padding="22dp">
+
+    <ImageView
+        android:id="@+id/img_room_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/un_room_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_is_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/img_room_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/img_room_icon" />
+
+    <TextView
+        android:id="@+id/tv_room_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="房间号/房屋号"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintTop_toBottomOf="@id/img_room_icon" />
+
+    <TextView
+        android:id="@+id/tv_room_code_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="1099"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_18"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tv_room_code" />
+</android.support.constraint.ConstraintLayout>

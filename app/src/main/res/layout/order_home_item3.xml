@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/clt"
+        android:layout_width="match_parent"
+        android:layout_height="148dp"
+        android:background="@mipmap/order_gray_bg">
+
+    <TextView
+            android:id="@+id/tv_order_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="28dp"
+            android:ellipsize="end"
+            android:ems="4"
+            android:singleLine="true"
+            android:text="强强"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+            android:id="@+id/tv_user_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="（1人）"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_order_name"
+            app:layout_constraintStart_toEndOf="@id/tv_order_name"
+            app:layout_constraintTop_toTopOf="@id/tv_order_name"/>
+
+    <TextView
+            android:id="@+id/tv_room_state"
+            android:layout_width="102dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="30dp"
+            android:gravity="center"
+            android:text="线上订单"
+            android:background="@drawable/ban_round_blue_bg"
+            android:textColor="@color/hui3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_order_name"/>
+
+    <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            android:text="山海广场D2号楼2单元303"
+            android:textColor="#FF666666"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/tv_order_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_order_name"/>
+
+    <TextView
+            android:id="@+id/tv_id_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            android:text="02月18日 14:00~02月20 12:00"
+            android:textColor="#FF666666"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/tv_address"
+            app:layout_constraintTop_toBottomOf="@id/tv_address"/>
+
+</android.support.constraint.ConstraintLayout>

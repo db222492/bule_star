@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="233dp"
+              android:background="@mipmap/bg_popu"
+              android:orientation="vertical">
+
+    <TextView
+            android:id="@+id/tv_5"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:drawableBottom="@drawable/line"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="操作员管理"
+            android:textColor="@color/black"
+            android:textSize="14sp"/>
+    <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:drawableBottom="@drawable/line"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="添加小区"
+            android:textColor="@color/black"
+            android:textSize="14sp"/>
+
+    <TextView
+            android:id="@+id/tv_2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:drawableBottom="@drawable/line"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="添加房间"
+            android:textColor="@color/black"
+            android:textSize="14sp"/>
+
+    <TextView
+            android:id="@+id/tv_3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:drawableBottom="@drawable/line"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="修改密码"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:visibility="gone"/>
+
+    <TextView
+            android:id="@+id/tv_4"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="退出登录"
+            android:textColor="@color/black"
+            android:textSize="14sp"/>
+
+</LinearLayout>

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <include layout="@layout/rlt_toolbar"/>
+
+    <TextView
+            android:id="@+id/tv_connect_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="连接状态："
+            android:textColor="@color/hui2"/>
+
+    <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginRight="10dp"
+            android:max="5"
+            android:progress="0"
+            android:progressDrawable="@drawable/progress_fund_detail"
+            android:visibility="gone"/>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:background="@color/colorWhite">
+
+        <TextView android:id="@+id/tv_dev_mac"
+                  android:padding="12dp"
+                  android:textIsSelectable="true"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"/>
+        <View android:layout_width="match_parent"
+              android:layout_height="0.5dp"
+              android:visibility="gone"
+              android:background="@color/colorGrey"/>
+
+        <TextView android:id="@+id/tv_dev_type"
+                  android:padding="12dp"
+                  android:visibility="gone"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="8dp"
+                  android:visibility="gone"
+                  android:orientation="horizontal">
+
+        <Button android:id="@+id/btn_bind_lock"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_width="0dp"
+                android:onClick="click"
+                android:background="@drawable/select_blue_round2"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/bind_lock"/>
+
+        <Button android:id="@+id/btn_unbind_lock"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_width="0dp"
+                android:onClick="click"
+                android:background="@drawable/select_blue_round2"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/unbind_lock"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="8dp"
+                  android:visibility="gone"
+                  android:orientation="horizontal">
+
+        <Button android:id="@+id/btn_lock_state"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_width="0dp"
+                android:background="@drawable/select_blue_round2"
+                android:textColor="@color/white"
+                android:onClick="click"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/lock_state"/>
+
+        <Button android:id="@+id/btn_lock_battery"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_width="0dp"
+                android:onClick="click"
+                android:background="@drawable/select_blue_round2"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/lock_battery"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="8dp"
+                  android:orientation="horizontal">
+
+        <Button android:id="@+id/btn_nb_imei"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:background="@drawable/select_blue_round2"
+                android:textColor="@color/white"
+                android:text="@string/nb_imei"/>
+
+        <Button android:id="@+id/btn_lock_login"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_width="0dp"
+                android:onClick="click"
+                android:visibility="gone"
+                android:background="@drawable/select_blue_round2"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/lock_login"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="8dp"
+                  android:orientation="horizontal">
+
+        <Button android:id="@+id/btn_open_lock"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_width="0dp"
+                android:background="@drawable/select_blue_round2"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_weight="1"
+                android:text="@string/open_lock"/>
+
+        <Button android:id="@+id/btn_sync_clock"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_width="0dp"
+                android:onClick="click"
+                android:visibility="gone"
+                android:background="@drawable/select_blue_round2"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/sync_clock"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="8dp"
+                  android:visibility="gone"
+                  android:orientation="horizontal">
+
+        <Button android:id="@+id/btn_add_pincode"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_width="0dp"
+                android:background="@drawable/select_blue_round2"
+                android:textColor="@color/white"
+                android:onClick="click"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/add_pincode"/>
+
+        <Button android:id="@+id/btn_del_pincode"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_width="0dp"
+                android:background="@drawable/select_blue_round2"
+                android:textColor="@color/white"
+                android:onClick="click"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/del_pincode"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="8dp"
+                  android:visibility="gone"
+                  android:orientation="horizontal">
+
+        <Button android:id="@+id/btn_add_rf_card"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/add_rf_card"/>
+
+        <Button android:id="@+id/btn_del_rf_card"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/del_rf_card"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="8dp"
+                  android:visibility="gone"
+                  android:orientation="horizontal">
+
+        <Button android:id="@+id/btn_add_fingerprint"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/add_fingerprint"/>
+
+        <Button android:id="@+id/btn_del_fingerprint"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/del_fingerprint"/>
+
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="8dp"
+                  android:orientation="horizontal">
+
+        <Button android:id="@+id/btn_change_admin_pincode"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/select_blue_round2"
+                android:textColor="@color/white"
+                android:layout_width="0dp"
+                android:onClick="click"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/change_admin_pincode"/>
+
+        <Button android:id="@+id/btn_gen_offline_pincode"
+                android:layout_marginLeft="12dp"
+                android:onClick="click"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/select_blue_round2"
+                android:textColor="@color/white"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:text="@string/gen_offline_pincode"/>
+
+    </LinearLayout>
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="8dp"
+              android:layout_marginEnd="12dp"
+              android:layout_marginStart="12dp"
+              android:textColor="@color/red"
+              android:id="@+id/tv_hint"/>
+</LinearLayout>

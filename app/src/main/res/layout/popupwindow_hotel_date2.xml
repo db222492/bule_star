@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+                android:id="@+id/btn_close"
+                style="@style/back_wh"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:onClick="click"
+                android:padding="@dimen/dp_10"
+                android:paddingEnd="20dp"
+                android:src="@mipmap/left_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+                android:id="@+id/tv_mycard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="选择入住离店日期"
+                app:layout_constraintBottom_toBottomOf="@id/btn_close"
+                app:layout_constraintStart_toEndOf="@id/btn_close"
+                app:layout_constraintTop_toTopOf="@id/btn_close"/>
+
+        <ImageView
+                android:id="@+id/img_bg"
+                android:layout_width="386dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="80dp"
+                android:background="@drawable/darkblue_shape_gradual"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <TextView
+                android:id="@+id/tv_startDateDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="11dp"
+                android:text="入住"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@id/img_bg"
+                app:layout_constraintTop_toTopOf="@id/img_bg"/>
+
+        <TextView
+                android:id="@+id/tv_startDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/tv_startDateDesc"
+                app:layout_constraintEnd_toEndOf="@id/tv_startDateDesc"
+                app:layout_constraintTop_toBottomOf="@id/tv_startDateDesc"/>
+        <TextView
+                android:id="@+id/tv_startWeek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="周二"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/tv_startDateDesc"
+                app:layout_constraintStart_toStartOf="@id/tv_startDateDesc"
+                app:layout_constraintTop_toBottomOf="@id/tv_startDate"
+                android:textSize="12sp"/>
+
+
+        <TextView
+                android:id="@+id/tv_endDateDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="离店"
+                android:layout_marginEnd="60dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                app:layout_constraintTop_toTopOf="@id/tv_startDateDesc"/>
+
+        <TextView
+                android:id="@+id/tv_endDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="click"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/tv_endDateDesc"
+                app:layout_constraintEnd_toEndOf="@id/tv_endDateDesc"
+                app:layout_constraintTop_toTopOf="@id/tv_startDate"
+        />
+        <TextView
+                android:id="@+id/tv_bot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="click"
+                android:text="->"
+                android:rotation="90"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/tv_endDate"
+                app:layout_constraintEnd_toEndOf="@id/tv_endDate"
+                app:layout_constraintTop_toBottomOf="@id/tv_endDate"
+        />
+        <TextView
+                android:id="@+id/tv_custom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="click"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/tv_bot"
+                app:layout_constraintEnd_toEndOf="@id/tv_bot"
+                app:layout_constraintTop_toBottomOf="@id/tv_bot"
+        />
+
+        <TextView
+                android:id="@+id/tv_endWeek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="周五"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@id/tv_endDateDesc"
+                app:layout_constraintEnd_toEndOf="@id/tv_endDateDesc"
+                app:layout_constraintTop_toBottomOf="@id/tv_endDate"
+                android:textSize="12sp"/>
+
+        <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="13dp"
+                android:text="1晚"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@id/img_bg"
+                app:layout_constraintEnd_toEndOf="@id/img_bg"
+                app:layout_constraintStart_toStartOf="@id/img_bg"/>
+
+        <View
+                android:layout_width="11dp"
+                android:layout_height="1dp"
+                android:layout_marginEnd="4dp"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="@id/tv_time"
+                app:layout_constraintEnd_toStartOf="@id/tv_time"
+                app:layout_constraintTop_toTopOf="@id/tv_time"/>
+
+        <View
+                android:layout_width="11dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="@id/tv_time"
+                app:layout_constraintStart_toEndOf="@id/tv_time"
+                app:layout_constraintTop_toTopOf="@id/tv_time"/>
+        <TextView
+                android:id="@+id/btn_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"
+                android:padding="10dp"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:text="清空"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/btn_close"
+                app:layout_constraintBottom_toBottomOf="@id/btn_close"
+                android:textColor="@color/blue"
+                android:textSize="14sp"/>
+
+        <TextView
+                android:id="@+id/tv_hintText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="结束日期"
+                android:textSize="12sp"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <LinearLayout
+            android:id="@+id/lt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            android:layout_marginBottom="100dp"
+            android:layout_marginTop="200dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="10dp"
+                android:background="#d2d1d1"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp">
+
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="日"/>
+
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="一"/>
+
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="二"/>
+
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="三"/>
+
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="四"/>
+
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="五"/>
+
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="六"/>
+        </LinearLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#d2d1d1"/>
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <TextView
+            android:id="@+id/tv_ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/select_blue_round"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="确定"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_alignParentBottom="true"
+            android:textColor="#fff"
+            android:textSize="14sp"/>
+
+</android.support.constraint.ConstraintLayout>

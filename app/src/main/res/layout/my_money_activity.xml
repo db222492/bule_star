@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+    <android.support.constraint.ConstraintLayout android:layout_width="match_parent"
+                                                 android:layout_height="wrap_content">
+        <include layout="@layout/rlt_toolbar2"/>
+
+
+        <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当前余额"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="26dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/toolbar"
+                android:textColor="#666666"
+                android:textSize="16sp"
+        />
+        <TextView
+                android:id="@+id/tv_money_num"
+                app:layout_constraintTop_toBottomOf="@id/tv_money"
+                app:layout_constraintStart_toStartOf="@id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:minEms="2"
+                android:maxEms="6"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+        />
+
+        <TextView
+                android:id="@+id/tv_money_unit"
+                app:layout_constraintTop_toTopOf="@id/tv_money_num"
+                app:layout_constraintBottom_toBottomOf="@id/tv_money_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="元"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/tv_money_num"
+                android:textColor="@color/hui5"
+                android:textSize="20sp"
+        />
+        <View
+                android:id="@+id/btn_embody"
+                android:layout_width="75dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="20dp"
+                android:onClick="click"
+                android:layout_marginEnd="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_money_unit"
+                app:layout_constraintBottom_toBottomOf="@id/tv_money_unit"
+                android:background="@mipmap/btn_embody"/>
+        <TextView
+                android:id="@+id/tv_sub_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="银行卡管理"
+                android:drawableEnd="@mipmap/right_back"
+                android:layout_marginTop="26dp"
+                android:drawablePadding="10dp"
+                android:onClick="click"
+                app:layout_constraintTop_toBottomOf="@id/tv_money_num"
+                app:layout_constraintStart_toStartOf="@id/tv_money_num"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+        />
+        <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="35dp"
+                android:background="#FFCCCCCC"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_sub_title"/>
+        <TextView
+                app:layout_constraintTop_toTopOf="@id/tlt"
+                app:layout_constraintBottom_toBottomOf="@id/tlt"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/tv_title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="交易记录  /"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+        />
+        <com.flyco.tablayout.SlidingTabLayout
+                android:id="@+id/tlt"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                app:tl_textsize="15sp"
+                app:tl_textUnselectColor="#FF999999"
+                app:tl_textSelectColor="@color/white"
+                app:tl_indicator_color="@color/blue"
+                app:tl_indicator_style="BLOCK"
+                android:layout_marginStart="150dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                app:tl_indicator_margin_left="2dp"
+                app:tl_indicator_margin_right="2dp"
+                app:layout_constraintTop_toBottomOf="@id/view1"
+        />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v4.view.ViewPager
+            android:id="@+id/vpr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+</LinearLayout>

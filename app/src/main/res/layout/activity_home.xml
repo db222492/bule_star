@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <FrameLayout
+            android:id="@+id/flt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="56dp" />
+
+    <com.jpeng.jptabbar.JPTabBar
+            android:id="@+id/tabBar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="4dp"
+            app:TabAnimate="Scale"
+            app:TabIconSize="18dp"
+            app:TabMargin="4dp"
+            app:TabMiddleBottomDis="4dp"
+            app:TabMiddleHMargin="80dp"
+            app:TabPageAnimateEnable="true"
+            app:TabPressAnimateEnable="true"
+            app:TabSelectColor="@color/black"
+            app:TabTextSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+</RelativeLayout>

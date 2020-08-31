@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:background="@mipmap/background"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_ze"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:layout_marginBottom="10dp"
+        android:text="注册"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/conl"
+        app:layout_constraintStart_toStartOf="@id/conl" />
+
+    <TextView
+        android:id="@+id/tv_y"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="已有账号?"
+        android:textColor="#C4C3C2"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/ev_d"
+        app:layout_constraintEnd_toStartOf="@id/ev_d"
+        app:layout_constraintTop_toTopOf="@id/ev_d" />
+
+    <TextView
+        android:id="@+id/ev_d"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="click"
+        android:text="去登录"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_ze"
+        app:layout_constraintEnd_toEndOf="@id/conl"
+        app:layout_constraintTop_toTopOf="@id/tv_ze" />
+
+    <ImageView
+        android:layout_width="360dp"
+        android:layout_height="360dp"
+        android:layout_marginTop="100dp"
+        android:background="@mipmap/bglogin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_ze" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/conl"
+        android:layout_width="320dp"
+        android:layout_height="480dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/bg_round"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <com.xw.repo.XEditText
+            android:id="@+id/et_user_name"
+            android:layout_width="280dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="42dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/et_bg_round"
+            android:hint="(用户名)不填默认手机号"
+            android:inputType="number"
+            android:maxLength="11"
+            android:paddingStart="5dp"
+            android:textColor="#000"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.xw.repo.XEditText
+            android:id="@+id/reed_phone_number"
+            android:layout_width="280dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/et_bg_round"
+            android:hint="手机号(11位手机号)"
+            android:inputType="number"
+            android:maxLength="11"
+            android:paddingStart="5dp"
+            android:textColor="#000"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/et_user_name"
+            app:layout_constraintStart_toStartOf="@id/et_user_name"
+            app:layout_constraintTop_toBottomOf="@id/et_user_name" />
+
+
+        <EditText
+            android:id="@+id/ed_auth_code"
+            android:layout_width="280dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/et_bg_round"
+            android:hint="请输入验证码(6位验证码)"
+            android:inputType="number"
+            android:maxLength="6"
+            android:padding="5dp"
+            android:textColor="#000"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/reed_phone_number"
+            app:layout_constraintStart_toStartOf="@id/reed_phone_number"
+            app:layout_constraintTop_toBottomOf="@id/reed_phone_number" />
+
+        <TextView
+            android:id="@+id/tv_get_code"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:background="@drawable/tv_bg_round"
+            android:gravity="center"
+            android:onClick="click"
+            android:padding="5dp"
+            android:text="获取验证码"
+            android:textColor="#fff"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@id/ed_auth_code"
+            app:layout_constraintTop_toTopOf="@id/ed_auth_code" />
+
+        <com.xw.repo.XEditText
+            android:id="@+id/ed_password"
+            android:layout_width="280dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/et_bg_round"
+            android:digits="@string/register_name_digits"
+            android:hint="设置密码(6-12)"
+            android:inputType="textPassword"
+            android:maxLength="12"
+            android:padding="5dp"
+            android:paddingEnd="@dimen/dp_20"
+            android:textColor="#000"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/reed_phone_number"
+            app:layout_constraintStart_toStartOf="@id/reed_phone_number"
+            app:layout_constraintTop_toBottomOf="@id/ed_auth_code"
+            app:x_hidePwdDrawable="@mipmap/password"
+            app:x_showPwdDrawable="@mipmap/plaincode" />
+
+        <com.xw.repo.XEditText
+            android:id="@+id/ed_new_password"
+            android:layout_width="280dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/et_bg_round"
+            android:digits="@string/register_name_digits"
+            android:hint="确认新密码(6-12)"
+            android:inputType="textPassword"
+            android:maxLength="12"
+            android:paddingStart="5dp"
+            android:paddingEnd="@dimen/dp_20"
+            android:textColor="#000"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/reed_phone_number"
+            app:layout_constraintStart_toStartOf="@id/reed_phone_number"
+            app:layout_constraintTop_toBottomOf="@id/ed_password"
+            app:x_hidePwdDrawable="@mipmap/password"
+            app:x_showPwdDrawable="@mipmap/plaincode" />
+
+        <TextView
+            android:id="@+id/tv_regist"
+            android:layout_width="280dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/bt_round"
+            android:gravity="center"
+            android:onClick="click"
+            android:text="注册"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/reed_phone_number"
+            app:layout_constraintStart_toStartOf="@id/reed_phone_number"
+            app:layout_constraintTop_toBottomOf="@id/ed_new_password" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

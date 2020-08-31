@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             android:id="@+id/clt"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="140dp"
+                                             android:background="@mipmap/order_gray_bg">
+
+    <TextView
+            android:id="@+id/tv_order_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="28dp"
+            android:text="房间号：0"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+            android:id="@+id/tv_lock_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/white"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:layout_marginEnd="30dp"
+            android:gravity="center"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_order_name"/>
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_address"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:textColor="#FF666666"-->
+    <!--android:textSize="16sp"-->
+    <!--app:layout_constraintStart_toStartOf="@id/tv_order_name"-->
+    <!--app:layout_constraintTop_toBottomOf="@id/tv_order_name" />-->
+
+
+    <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#FF666666"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/tv_order_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_order_name"/>
+
+
+    <TextView
+            android:id="@+id/tv_bind_room"
+            android:layout_width="wrap_content"
+            android:layout_height="31dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/roundbutton_blue2"
+            android:gravity="center"
+            android:text="去绑定"
+            android:minEms="5"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_open_lock"/>
+
+    <TextView
+            android:id="@+id/tv_open_lock"
+            android:layout_width="wrap_content"
+            android:layout_height="31dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/roundbutton_blue2"
+            android:gravity="center"
+            android:text="开锁"
+            android:minEms="5"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

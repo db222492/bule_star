@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+>
+    <include layout="@layout/rlt_toolbar2"/>
+
+
+    <TextView
+            android:id="@+id/tv_txt1"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="16dp"
+            android:drawableBottom="@drawable/line"
+            
+            android:gravity="center_vertical"
+            android:onClick="click"
+            android:paddingStart="@dimen/dp_10"
+            android:text="持卡人姓名"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"/>
+
+    <TextView
+            android:id="@+id/tv_txt3"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="16dp"
+            android:drawableBottom="@drawable/line"
+            
+            android:gravity="center_vertical"
+            android:onClick="click"
+            android:paddingStart="@dimen/dp_10"
+            android:text="银行卡号"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_txt1"/>
+    <TextView
+            android:id="@+id/tv_txt7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="16dp"
+            android:drawableBottom="@drawable/line"
+            android:text="所属银行:"
+            android:gravity="center_vertical"
+            android:onClick="click"
+            android:paddingStart="@dimen/dp_10"
+            android:textColor="@color/hui5"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_txt3"/>
+    <TextView
+            android:id="@+id/tv_txt6"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="16dp"
+            android:drawableBottom="@drawable/line"
+            
+            android:gravity="center_vertical"
+            android:onClick="click"
+            android:paddingStart="@dimen/dp_10"
+            android:text="开户行名称"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_txt7"/>
+    <TextView
+            android:id="@+id/tv_txt4"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="16dp"
+            android:drawableBottom="@drawable/line"
+            
+            android:gravity="center_vertical"
+            android:onClick="click"
+            android:paddingStart="@dimen/dp_10"
+            android:text="手机号"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_txt6"/>
+
+    <TextView
+            android:id="@+id/tv_txt5"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="16dp"
+            android:drawableBottom="@drawable/line"
+            
+            android:gravity="center_vertical"
+            android:onClick="click"
+            android:paddingStart="@dimen/dp_10"
+            android:text="验证码"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_txt4"/>
+
+
+    <com.xw.repo.XEditText
+            android:id="@+id/et_txt1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="129dp"
+            android:background="@drawable/round_bg_write"
+            android:hint="请输入持卡人姓名"
+            android:inputType="text"
+            android:paddingStart="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_10"
+            android:singleLine="true"
+            android:textColor="@color/black"
+
+            android:textSize="16sp"
+
+            app:layout_constraintBottom_toBottomOf="@id/tv_txt1"
+            app:layout_constraintTop_toTopOf="@id/tv_txt1"/>
+
+
+    <com.xw.repo.XEditText
+            android:id="@+id/et_txt3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="129dp"
+            android:background="@drawable/round_bg_write"
+            android:hint="请输入银行卡号"
+            android:inputType="number"
+            android:paddingStart="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_10"
+            android:singleLine="true"
+            android:textColor="@color/black"
+
+            android:textSize="16sp"
+
+            app:layout_constraintBottom_toBottomOf="@id/tv_txt3"
+            app:layout_constraintTop_toTopOf="@id/tv_txt3"/>
+
+    <com.xw.repo.XEditText
+            android:id="@+id/et_txt4"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="129dp"
+            android:background="@drawable/round_bg_write"
+            android:hint="请输入手机号"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:paddingStart="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_10"
+            android:singleLine="true"
+            android:textColor="@color/black"
+
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_txt4"
+            app:layout_constraintTop_toTopOf="@id/tv_txt4"/>
+    <com.xw.repo.XEditText
+            android:id="@+id/et_txt6"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="129dp"
+            android:background="@drawable/round_bg_write"
+            android:hint="请输入开户行名称"
+            android:inputType="text"
+            android:paddingStart="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_10"
+            android:singleLine="true"
+            android:textColor="@color/black"
+
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_txt6"
+            app:layout_constraintTop_toTopOf="@id/tv_txt6"/>
+    <com.xw.repo.XEditText
+            android:id="@+id/et_txt5"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="129dp"
+            android:background="@drawable/round_bg_write"
+            android:hint="请输入验证码"
+            android:inputType="number"
+            android:paddingStart="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_10"
+            android:singleLine="true"
+            android:textColor="@color/black"
+
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tv_txt5"
+            app:layout_constraintTop_toTopOf="@id/tv_txt5"/>
+
+    <TextView
+            android:id="@+id/tv_send_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="获取验证码"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:onClick="click"
+            android:layout_marginEnd="17dp"
+            android:padding="10dp"
+            android:background="@drawable/select_blue_round2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tv_txt5"
+            app:layout_constraintTop_toTopOf="@id/tv_txt5"
+    />
+
+    <TextView
+            android:id="@+id/tv_sure"
+            android:layout_width="280dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="36dp"
+            android:layout_weight="1"
+            android:background="@drawable/select_blue_round"
+            android:gravity="center"
+            android:onClick="click"
+            android:text="提     交"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+</android.support.constraint.ConstraintLayout>

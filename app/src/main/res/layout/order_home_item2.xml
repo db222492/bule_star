@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/clt"
+        android:layout_width="match_parent"
+        android:layout_height="188dp"
+        android:background="@mipmap/order_green_bg">
+
+    <TextView
+            android:id="@+id/tv_order_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="28dp"
+            android:ellipsize="end"
+            android:ems="4"
+            android:singleLine="true"
+            android:text="强强"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+            android:id="@+id/tv_user_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="（1人）"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_order_name"
+            app:layout_constraintStart_toEndOf="@id/tv_order_name"
+            app:layout_constraintTop_toTopOf="@id/tv_order_name"/>
+
+    <TextView
+            android:id="@+id/tv_room_state"
+            android:layout_width="102dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/ban_round_green_bg"
+            android:gravity="center"
+            android:text="待认证"
+            android:textColor="@color/green"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_order_name"/>
+
+    <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            android:text="山海广场D2号楼2单元303"
+            android:textColor="#FF666666"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/tv_order_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_order_name"/>
+
+    <TextView
+            android:id="@+id/tv_id_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            android:text="02月18日 14:00~02月20 12:00"
+            android:textColor="#FF666666"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/tv_address"
+            app:layout_constraintTop_toBottomOf="@id/tv_address"/>
+    <android.support.constraint.Guideline
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/gle_1"
+            app:layout_constraintGuide_percent="0.6"
+            android:orientation="horizontal"
+    />
+    <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="65dp"
+            android:layout_height="27dp"
+            android:text="拒绝"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="100dp"
+            android:background="@drawable/green_round_kuang"
+            android:textColor="@color/green"
+            app:layout_constraintTop_toBottomOf="@id/gle_1"
+            android:textSize="15sp"
+    />
+    <TextView
+            android:id="@+id/tv_sure"
+            android:layout_width="65dp"
+            android:layout_height="27dp"
+            android:text="确认"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/green_shape2"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="@id/tv_cancel"
+            android:textSize="15sp"
+    />
+</android.support.constraint.ConstraintLayout>

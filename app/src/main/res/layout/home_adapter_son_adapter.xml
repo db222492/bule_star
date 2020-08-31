@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/home_item_green"
+        android:id="@+id/clt_color_type"
+        android:layout_height="112dp">
+    <TextView
+            android:id="@+id/tv_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="108"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+            android:id="@+id/tv_titleeee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="高级大床房"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="@id/tv_number"
+            app:layout_constraintTop_toBottomOf="@id/tv_number"/>
+
+
+    <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="李哒哒;"
+            app:layout_constraintTop_toBottomOf="@id/tv_titleeee"
+            android:layout_marginTop="2dp"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="@id/tv_titleeee"
+            android:textColor="#FFFFFF"/>
+
+</android.support.constraint.ConstraintLayout>

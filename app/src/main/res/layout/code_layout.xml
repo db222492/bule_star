@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clt_code"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.xw.repo.XEditText
+        android:id="@+id/et_code"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="@drawable/roundbutton_white"
+        android:drawableStart="@mipmap/ic_blue_connected"
+        android:drawableBottom="@drawable/black_line"
+        android:hint="请输入验证码"
+        android:inputType="number"
+        android:maxLength="6"
+        android:paddingEnd="132dp"
+        android:textColorHint="@color/hui4"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_code"
+        android:layout_width="122dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="10dp"
+        android:text="获取验证码"
+        android:onClick="click"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/et_code"
+        app:layout_constraintEnd_toEndOf="@id/et_code"
+        app:layout_constraintTop_toTopOf="@id/et_code" />
+</android.support.constraint.ConstraintLayout>

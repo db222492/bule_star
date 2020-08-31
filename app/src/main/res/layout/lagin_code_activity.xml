@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             android:background="#FFF">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="@mipmap/background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="欢迎您"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tv_zhineng"
+        app:layout_constraintStart_toStartOf="@id/cl"/>
+
+    <TextView
+        android:id="@+id/tv_zhineng"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+        android:text="来到智能民宿"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/cl"
+        app:layout_constraintStart_toStartOf="@id/cl"/>
+
+    <ImageView
+        android:layout_width="360dp"
+        android:layout_height="440dp"
+        android:layout_marginTop="100dp"
+        android:background="@mipmap/bglogin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_zhineng"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl"
+        android:layout_width="320dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/bg_round"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.xw.repo.XEditText
+            android:id="@+id/ed_account_number"
+            android:layout_width="280dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="42dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/et_bg_round"
+            android:drawableStart="@mipmap/phone_number"
+            android:drawablePadding="10dp"
+            android:hint="请输入账号"
+            android:inputType="number"
+            android:maxLength="11"
+            android:paddingStart="18dp"
+            android:paddingEnd="10dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:x_disableEmoji="true"/>
+
+        <com.xw.repo.XEditText
+            android:id="@+id/ed_password"
+            android:layout_width="280dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/et_bg_round"
+            android:drawableStart="@mipmap/password_lock"
+            android:drawablePadding="10dp"
+            android:hint="请输入您的密码"
+            android:inputType="textPassword"
+            android:paddingStart="18dp"
+            android:paddingEnd="10dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/ed_account_number"
+            app:layout_constraintStart_toStartOf="@id/ed_account_number"
+            app:layout_constraintTop_toBottomOf="@id/ed_account_number"
+            app:x_disableEmoji="true"
+            app:x_hidePwdDrawable="@mipmap/password"
+            app:x_showPwdDrawable="@mipmap/plaincode"
+
+        />
+
+        <TextView
+            android:id="@+id/tv_landing"
+            android:layout_width="280dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/select_blue_round"
+            android:gravity="center"
+            android:onClick="click"
+            android:text="登录"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/ed_account_number"
+            app:layout_constraintStart_toStartOf="@id/ed_account_number"
+            app:layout_constraintTop_toBottomOf="@id/ed_password"/>
+
+        <TextView
+            android:id="@+id/tv_code_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="30dp"
+            android:onClick="click"
+            android:text="短信验证码登录"
+            android:textColor="@color/blue"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/ed_account_number"
+            app:layout_constraintTop_toBottomOf="@id/tv_landing"/>
+
+        <TextView
+            android:id="@+id/tv_forget_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="45dp"
+            android:onClick="click"
+            android:text="忘记密码"
+            android:textColor="#666666"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/ed_account_number"
+            app:layout_constraintTop_toBottomOf="@id/tv_landing"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
